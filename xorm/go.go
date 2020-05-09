@@ -305,6 +305,7 @@ func tag(table *core.Table, col *core.Column) string {
 		}
 	}
 	if len(res) > 0 {
+		tags = append(tags, "db:\""+strings.Join(res, " ")+"\"")
 		tags = append(tags, "xorm:\""+strings.Join(res, " ")+"\"")
 	}
 	if len(tags) > 0 {
